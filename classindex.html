@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2308新生实践课班级主页</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url(images/image2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            opacity: 0.6;
+        }
+        
+        nav {
+            background-color: #666;
+            padding: 1em;
+            text-align: center;
+            opacity: 0.8;
+            margin-bottom: 0px;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 25px;
+            margin: 0 1em;
+        }
+        
+        h1 {
+            font-size: 55px;
+        }
+        
+        p {
+            font-size: 25px;
+            color: wheat;
+        }
+        
+        img {
+            opacity: 0.25;
+            margin-left: 500px;
+            margin-top: 25px;
+        }
+        
+        h2 {
+            font-size: 40px;
+            text-align: center;
+            color: #f4f4f4;
+            margin-top: 0px;
+        }
+        
+        h3 {
+            font-size: 25px;
+            text-align: center;
+            color: #f4f4f4;
+            margin-top: 50px;
+        }
+        
+        section {
+            padding: 7em;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>班级主页</h1>
+        <p>————请选择寝室————</p>
+    </header>
+
+    <nav>
+        <a href="https://diving-into-the-ocean.github.io/diving-into-the-ocean/">东十三605</a>
+        <a href="https://passionsp.github.io/passionsp/606%E5%AF%9D%E5%AE%A4">东十三606</a>
+        <a href="https://panwenyi666.github.io/dorm607/">东十三607</a>
+        <a href="https://hust3608.github.io/">东十三608</a>
+        <a href="https://sunweixuanalpha.github.io/D13-609/">东十三609</a>
+        <a href="#page6">东十三612</a>
+        <a href=" https://lu7jiu.github.io/room_web/">东九427&415</a>
+        <a href="#page9">其他</a>
+    </nav>
+
+    <section id="home">
+        <h2>欢迎来到CS2308班级主页</h2>
+
+        <img src="images/image21.png">
+        <h3>鸣谢：范晔斌老师</h3>
+    </section>
+
+
+
+    <footer>
+        <p>&copy; CS2308 班级主页</p>
+    </footer>
+
+    <script>
+        // JavaScript代码，用于实现页面之间的切换
+        function showPage(pageId) {
+            // 隐藏所有页面
+            document.querySelectorAll('section').forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // 显示特定的页面
+            document.getElementById(pageId).style.display = 'block';
+        }
+
+        // 默认显示首页
+        showPage('home');
+
+        // 监听导航链接的点击事件，并调用showPage函数
+        document.querySelectorAll('nav a').forEach(function(link) {
+            link.addEventListener('click', functio n(e) {
+                e.preventDefault();
+                showPage(link.getAttribute('href').substring(1));
+            });
+        });
+    </script>
+
+</body>
+
+</html>
